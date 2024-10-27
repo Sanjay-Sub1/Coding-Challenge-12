@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Drawing Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    canvas {
+      border: 1px solid #000;
+      margin-top: 20px;
+    }
+    .controls {
+      display: flex;
+    }
+    .controls > * {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Canvas Drawing Tool</h1>
+  <div class="controls">
+    <label>Select Drawing Tool:</label>
+    <label>
+      <input type="radio" name="tool" value="brush" checked> Brush
+    </label>
+    <label>
+      <input type="radio" name="tool" value="line"> Line
+    </label>
+    <label>
+      <input type="radio" name="tool" value="rectangle"> Rectangle
+    </label>
+    <label>
+      <input type="radio" name="tool" value="circle"> Circle
+    </label>
+
+    <label for="colorPicker">Select Drawing Color:</label>
+    <input type="color" id="colorPicker" value="#000000">
+
+    <button id="clearCanvas">Clear Canvas</button>
+  </div>
+
+  <canvas id="drawingCanvas" width="500" height="400"></canvas>
+
+  <script src="cc_12.js"></script>
+</body>
+</html>
