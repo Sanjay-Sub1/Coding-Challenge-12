@@ -13,6 +13,13 @@ let color = '#000000';
 
 ctx.strokeStyle = color;
 ctx.fillStyle = color;
+//Changes the color based on the button
+colorPicker.addEventListener('input', (event) => {
+    color = event.target.value;
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+  });
+
 //Updates the tool being used
 toolButtons.forEach(button => {
   button.addEventListener('change', () => {
