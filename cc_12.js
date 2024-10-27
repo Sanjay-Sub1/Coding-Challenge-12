@@ -23,7 +23,7 @@ clearButton.addEventListener('click', () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 });
 //Begins the drawing process
-function beginDrawing(event) {
+function startDrawing(event) {
   drawing = true;
   ctx.beginPath();
   ctx.moveTo(event.offsetX, event.offsetY);
@@ -36,7 +36,7 @@ function draw(event) {
   ctx.stroke();
 }
 //Ends the drawing process if the mouse button is lifted
-function endDrawing() {
+function stopDrawing() {
   if (drawing) {
     drawing = false;
     ctx.closePath();
